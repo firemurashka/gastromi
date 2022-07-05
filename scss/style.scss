@@ -1,0 +1,130 @@
+@import "nullstyle.scss";
+html,
+body {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #5a4e66;
+    background: #fff;
+    //шрифт по умолчанию
+    //если шрифт из 2 и более слов то в " "
+    font-family: Open Sans;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+
+//технический класс, не являестся БЭМблоком, который содержит общие стили
+//ограничивающий контейнер
+._container {
+    max-width: 1410px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+/* ._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+} */
+
+//=====================================================================================================================
+.page {
+    font-size: 18px;
+}
+
+.mindbox-popup {
+    display: none;
+}
+
+.mindbox-products {
+    margin: 40px 0;
+    padding: 20px 0;
+    background-color: rgba(84, 84, 84, .05);
+    &__title {
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+.products {
+    &__item {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    &__image {
+        max-width: 300px;
+        margin: 0px 0px 10px 0px;
+        & img {
+            width: 100%;
+            border-radius: 5px;
+            transition-duration: 0.3s;
+        }
+    }
+    &__title {
+        margin: 0px 0px 10px 0px;
+    }
+    &__text {
+        margin: 0px 0px 10px 0px;
+        font-weight: 600;
+    }
+    &__button {
+        background-color: #91be55;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 5px;
+        min-width: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: .1em;
+        line-height: 1;
+        padding: 12px 20px;
+        height: 36px !important;
+        transition: all 0.2s;
+        &:hover {
+            background-color: #9bc85f;
+        }
+    }
+}
